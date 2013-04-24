@@ -1,0 +1,52 @@
+﻿<Window x:Class="Disable_Internet_Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ethernet Assassin" Height="170" Width="325" Closing="OnClose" 
+        StateChanged="OnStateChanged" IsVisibleChanged="OnIsVisibleChanged" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF363636" Offset="0.865"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <StackPanel>
+        <Label Name="DescriptionLabel"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               Margin="10" Foreground="#FFFF8B00" FontFamily="Courier New" FontWeight="Bold" FontSize="14">
+            Toggle your network connection
+        </Label>
+        <TextBox Name="NetworkTextBox"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Height="20"
+                 Width="200"
+                 Margin="10" FontFamily="Courier New">
+            Local Area Connection 2
+        </TextBox>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+            <Button Name="EnableButton"
+                    Height="25"
+                    Width="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="10"
+                    Click="EnableButton_Click" FontFamily="Courier New" Foreground="#FFFF8B00" Background="Black" FontWeight="Bold" FontSize="14">
+                Enable
+            </Button>
+            <Button Name="DisableButton"
+                    Height="25"
+                    Width="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="10"
+                    Click="DisableButton_Click" FontFamily="Courier New" Foreground="#FFFF8B00" Background="Black" FontWeight="Bold" FontSize="14">
+                Disable
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
